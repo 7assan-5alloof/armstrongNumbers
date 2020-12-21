@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool armstrong(int)
+bool armstrong(int);
 int main()
 {
     for (int number = 100; number < 10000; number++)
@@ -21,8 +21,19 @@ bool armstrong(int num)
     int x = num;
     int sum = 0;
     int digit;
-    while (n > 0)
+    while (num > 0)
     {
-        dig = num % 10;
+        digit = num % 10;
+        sum += digit * digit * digit;
+        num /= 10;
+    }
+
+    if (sum == x)
+    {
+        return true;
+    }
+    else
+    {
+    return false;
     }
 }
